@@ -1,0 +1,126 @@
+.header {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.navigation {
+  margin: 0;
+  padding: 34px 44px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation__links {
+  margin: 0 20px 0 0;
+  padding: 0;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.navigation__ref {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.25;
+  transition: opacity 0.3s ease-in;
+}
+
+.navigation__ref:hover {
+  opacity: 0.6;
+}
+
+.navigation__button {
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.25;
+  transition: opacity 0.3s ease-in;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  border: none;
+  background: url('../../assets/menu.svg') no-repeat 3px -7px;
+}
+
+.navigation__button:hover {
+    opacity: 0.6;
+}
+
+.navigation__ref_type_sign-in {
+  display: flex;
+}
+
+.navigation__ref_type_sign-in::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url('/src/assets/sign-in.svg') no-repeat 3px -7px;
+  background-size: 22px 32px;
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    max-width: 1280px;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  .header {
+  }
+} */
+
+@media screen and (max-width: 768px) {
+
+  .navigation__background {
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(2, 9, 35, 1);
+  }
+
+  .navigation__background_active {
+    display: block;
+    opacity: 1;
+  }
+
+  .navigation__button {
+    position: relative;
+    top: 0;
+    left:42vw;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+
+  .navigation__links {
+    box-sizing: border-box;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    height: 100vh;
+    /* margin: 0; */
+    padding: 80px 0 90px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navigation__links_active {
+    display: flex;
+  }
+}

@@ -1,0 +1,179 @@
+.hexagon {
+  margin: 3px 0 0;
+  padding: 0;
+  display: flex;
+  width: 144px;
+  height: 225px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 20px;
+  z-index: 1;
+  justify-content: center;
+  transition: transform 0.7s ease-in, width 0.7s ease-in, height 0.7s ease-in,
+    border-radius 0.7s ease-in;
+}
+
+.hexagon:before,
+.hexagon:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: '';
+  z-index: -1;
+}
+
+.hexagon:before {
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.hexagon:after {
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+
+.hexagon_size_medium {
+  width: 78px;
+  height: 133px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hexagon_size_small {
+  width: 54px;
+  height: 90px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hexagon_transform_middle-up {
+  transform: translate(187px, -68px);
+}
+.hexagon_transform_high-up {
+  transform: translate(318px, -125px);
+}
+
+.hexagon_transform_middle-down {
+  transform: translate(-191px, 151px);
+}
+.hexagon_transform_high-down {
+  transform: translate(-317px, 254px);
+}
+
+.hexagon__content {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0 18px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  z-index: 1;
+}
+
+.hexagon__button {
+  margin: 0;
+  padding: 8px;
+  line-height: 1.25;
+  border: 1px solid #000;
+  border-radius: 7px;
+  background: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+
+.hexagon__button:hover {
+  opacity: 0.6;
+}
+
+.hexagon__text {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.hexagon__text_type_date {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.hexagon__text_size_medium {
+  align-self: center;
+}
+
+.hexagon__text_size_small {
+  align-self: center;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .hexagon {
+    top: 57px;
+    width: 76px;
+    height: 109px;
+    border-radius: 16px;
+  }
+
+  .hexagon__button {
+    padding: 0;
+    border: none;
+    font-size: 14px;
+  }
+
+  .hexagon__content {
+    margin: 6px 0 6px;
+  }
+
+  .hexagon__text {
+    font-size: 10px;
+  }
+
+  .hexagon__text_type_date {
+    font-size: 16px;
+  }
+
+  .hexagon__text_size_small {
+    font-size: 10px;
+  }
+
+  .hexagon_size_medium{
+    width: 47px;
+    height: 68px;
+    border-radius: 11px;
+  }
+  .hexagon_size_small{
+    width: 29px;
+    height: 45px;
+    border-radius: 6px;
+  }
+
+  .hexagon_transform_middle-up {
+    transform: translate(126px, -58px);
+  }
+  .hexagon_transform_high-up {
+    transform: translate(183px, -82px);
+  }
+  
+  .hexagon_transform_middle-down {
+    transform: translate(-129px, 91px);
+  }
+  .hexagon_transform_high-down {
+    transform: translate(-185px, 135px);
+  }
+}
+
+@media screen and (max-width:440px) {
+    .hexagon_transform_middle-up {
+        transform: translate(82px, -28px);
+      }
+      .hexagon_transform_high-up {
+        transform: translate(137px, -50px);
+      }
+      
+      .hexagon_transform_middle-down {
+        transform: translate(-82px, 66px);
+      }
+      .hexagon_transform_high-down {
+        transform: translate(-138px, 109px);
+      }
+}
